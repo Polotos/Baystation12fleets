@@ -50,7 +50,7 @@
 	data["exploration_jobs"] = format_jobs(SSjobs.titles_by_department(EXP))
 	data["service_jobs"] = format_jobs(SSjobs.titles_by_department(SRV))
 	data["supply_jobs"] = format_jobs(SSjobs.titles_by_department(SUP))
-	data["civilian_jobs"] = format_jobs(SSjobs.titles_by_department(CIV))
+	data["civilian_jobs"] = format_jobs(SSjobs.titles_by_department(CIV | NOWL))
 	data["centcom_jobs"] = format_jobs(get_all_centcom_jobs())
 
 	data["all_centcom_access"] = is_centcom ? get_accesses(1) : null

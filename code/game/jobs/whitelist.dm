@@ -1,6 +1,6 @@
 #define WHITELISTFILE "data/whitelist.txt"
 
-var/global/list/Six_whitelist = file2list("config/whitelist/Six_whitelist.txt")
+var/global/list/Six_whitelist = list()
 
 /hook/startup/proc/loadSixwhitelist()
 	if(config.Six_whitelist)
@@ -18,8 +18,7 @@ var/global/list/Six_whitelist = file2list("config/whitelist/Six_whitelist.txt")
 		return 0
 	return ("[M.ckey]" in Six_whitelist)
 
-var/global/list/Five_whitelist = file2list("config/whitelist/Five_whitelist.txt")
-
+var/global/list/Five_whitelist = list()
 /hook/startup/proc/loadFivewhitelist()
 	if(config.Five_whitelist)
 		load_Five_whitelist()
@@ -36,7 +35,7 @@ var/global/list/Five_whitelist = file2list("config/whitelist/Five_whitelist.txt"
 		return 0
 	return ("[M.ckey]" in Five_whitelist)
 
-var/global/list/Four_whitelist = file2list("config/whitelist/Four_whitelist.txt")
+var/global/list/Four_whitelist = list()
 
 /hook/startup/proc/loadFourwhitelist()
 	if(config.Four_whitelist)
@@ -54,7 +53,7 @@ var/global/list/Four_whitelist = file2list("config/whitelist/Four_whitelist.txt"
 		return 0
 	return ("[M.ckey]" in Four_whitelist)
 
-var/global/list/Three_whitelist = file2list("config/whitelist/Three_whitelist.txt")
+var/global/list/Three_whitelist = list()
 
 /hook/startup/proc/loadThreewhitelist()
 	if(config.Three_whitelist)
@@ -72,7 +71,7 @@ var/global/list/Three_whitelist = file2list("config/whitelist/Three_whitelist.tx
 		return 0
 	return ("[M.ckey]" in Three_whitelist)
 
-var/global/list/Second_whitelist = file2list("config/whitelist/Second_whitelist.txt")
+var/global/list/Second_whitelist
 
 /hook/startup/proc/loadSecondwhitelist()
 	if(config.Second_whitelist)
@@ -84,7 +83,7 @@ var/global/list/Second_whitelist = file2list("config/whitelist/Second_whitelist.
 	if(!text)
 		log_misc("Failed to load config/Second_whitelist.txt")
 	else
-		Three_whitelist = splittext(text, "\n")
+		Second_whitelist = splittext(text, "\n")
 /proc/check_Second_whitelist(mob/M)
 	if(!Second_whitelist)
 		return 0
