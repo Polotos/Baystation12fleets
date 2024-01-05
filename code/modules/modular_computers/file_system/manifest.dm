@@ -1,7 +1,7 @@
 // Generates a simple HTML crew manifest for use in various places
 /proc/html_crew_manifest(monochrome, OOC)
 	var/list/dept_data = list(
-		list("names" = list(), "header" = "Heads of Staff", "flag" = COM | HCOM, "color" = MANIFEST_COLOR_COMMAND),
+		list("names" = list(), "header" = "Heads of Staff", "flag" = COM, "color" = MANIFEST_COLOR_COMMAND),
 		list("names" = list(), "header" = "Command Support", "flag" = SPT, "color" = MANIFEST_COLOR_SUPPORT),
 		list("names" = list(), "header" = "Research", "flag" = SCI, "color" = MANIFEST_COLOR_SCIENCE),
 		list("names" = list(), "header" = "Security", "flag" = SEC, "color" = MANIFEST_COLOR_SECURITY),
@@ -127,7 +127,7 @@
 
 /proc/nano_crew_manifest()
 	return list(
-		"heads" = filtered_nano_crew_manifest(SSjobs.titles_by_department(COM | HCOM)),
+		"heads" = filtered_nano_crew_manifest(SSjobs.titles_by_department(COM)),
 		"spt" =   filtered_nano_crew_manifest(SSjobs.titles_by_department(SPT)),
 		"sci" =   filtered_nano_crew_manifest(SSjobs.titles_by_department(SCI)),
 		"sec" =   filtered_nano_crew_manifest(SSjobs.titles_by_department(SEC)),

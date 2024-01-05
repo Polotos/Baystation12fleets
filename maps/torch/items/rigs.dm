@@ -319,7 +319,7 @@
 * EXPLORATION
 */
 /obj/item/rig/exploration
-	name = "heavy patrol team HCM"
+	name = "heavy exploration HCM"
 	suit_type = "heavy exploration hardsuit"
 	icon = 'maps/torch/icons/obj/uniques.dmi'
 	desc = "Expeditionary Corps' Exoplanet Exploration Armored Unit, A-Unit for short. Built for more hostile (and hungry) environments, it features additional armor and powered exoskeleton."

@@ -25,7 +25,7 @@
 	)
 
 /obj/structure/closet/secure_closet/liaison
-	name = "Ambassador's Assistant's locker"
+	name = "corporate liaison's locker"
 	req_access = list(access_liaison)
 	closet_appearance = /singleton/closet_appearance/secure_closet/torch/corporate/liaison
 
@@ -47,7 +47,7 @@
 	)
 
 /obj/structure/closet/secure_closet/representative
-	name = "\improper United Federation Ambassador's locker"
+	name = "\improper Sol Central Government representative's locker"
 	req_access = list(access_representative)
 	closet_appearance = /singleton/closet_appearance/secure_closet/torch/sol/rep
 

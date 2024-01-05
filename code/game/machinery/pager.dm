@@ -7,7 +7,7 @@
 	idle_power_usage = 2
 	var/acknowledged = 0
 	var/last_paged
-	var/department = COM | HCOM
+	var/department = COM
 	var/location
 
 /obj/machinery/pager/Initialize()

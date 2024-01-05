@@ -79,12 +79,6 @@
 	..()
 	BACKPACK_OVERRIDE_CHEMISTRY
 
-/singleton/hierarchy/outfit/job/torch/crew/medical/chemist/fleet
-	name = OUTFIT_JOB_NAME("chemist - Fleet")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/medical
-	shoes = /obj/item/clothing/shoes/dutyboots
-	id_types = list(/obj/item/card/id/torch/crew/medical/chemist)
-
 /singleton/hierarchy/outfit/job/torch/crew/medical/counselor
 	name = OUTFIT_JOB_NAME("Counselor")
 	uniform = /obj/item/clothing/under/rank/psych/turtleneck

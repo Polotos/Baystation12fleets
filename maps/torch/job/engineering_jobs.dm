@@ -12,9 +12,11 @@
 	ideal_character_age = 40
 	outfit_type = /singleton/hierarchy/outfit/job/torch/crew/engineering/senior_engineer
 	allowed_branches = list(
+		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /singleton/hierarchy/outfit/job/torch/crew/engineering/senior_engineer/fleet
 	)
 	allowed_ranks = list(
+		/datum/mil_rank/ec/e7,
 		/datum/mil_rank/fleet/e6,
 		/datum/mil_rank/fleet/e7,
 		/datum/mil_rank/fleet/e8,
@@ -68,12 +70,17 @@
 		)
 	outfit_type = /singleton/hierarchy/outfit/job/torch/crew/engineering/engineer
 	allowed_branches = list(
-		/datum/mil_branch/fleet = /singleton/hierarchy/outfit/job/torch/crew/engineering/engineer/fleet
+		/datum/mil_branch/expeditionary_corps,
+		/datum/mil_branch/fleet = /singleton/hierarchy/outfit/job/torch/crew/engineering/engineer/fleet,
+		/datum/mil_branch/civilian = /singleton/hierarchy/outfit/job/torch/crew/engineering/contractor
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5
+		/datum/mil_rank/fleet/e5,
+		/datum/mil_rank/ec/e3,
+		/datum/mil_rank/ec/e5,
+		/datum/mil_rank/civ/contractor
 	)
 	skill_points = 26
 	min_skill = list( // 12 points
@@ -120,9 +127,11 @@
 
 	outfit_type = /singleton/hierarchy/outfit/job/torch/crew/engineering/engineer
 	allowed_branches = list(
+		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /singleton/hierarchy/outfit/job/torch/crew/engineering/engineer/fleet
 	)
 	allowed_ranks = list(
+		/datum/mil_rank/ec/e3,
 		/datum/mil_rank/fleet/e2
 	)
 
@@ -175,10 +184,14 @@
 		"Mechsuit Technician")
 	outfit_type = /singleton/hierarchy/outfit/job/torch/crew/engineering/roboticist
 	allowed_branches = list(
+		/datum/mil_branch/expeditionary_corps = /singleton/hierarchy/outfit/job/torch/crew/engineering/roboticistec,
 		/datum/mil_branch/fleet = /singleton/hierarchy/outfit/job/torch/crew/engineering/roboticistfleet,
+		/datum/mil_branch/civilian = /singleton/hierarchy/outfit/job/torch/crew/engineering/roboticist
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/fleet/e5,
+		/datum/mil_rank/ec/e5,
+		/datum/mil_rank/civ/contractor
 	)
 	skill_points = 26
 	min_skill = list( // 22 points

@@ -21,7 +21,7 @@
 	item_state = "duty_gloves_cmd"
 
 /obj/item/clothing/gloves/thick/duty/solgov/exp
-	name = "patrol team duty gloves"
+	name = "exploration duty gloves"
 	desc = "These black duty gloves are made from durable synthetic materials, and have a lovely purple accent color."
 	icon_state = "duty_gloves_exp"
 	item_state = "duty_gloves_exp"

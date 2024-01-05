@@ -41,7 +41,7 @@
 	data["mmode"] = mod_mode
 	data["centcom_access"] = is_centcom
 
-	data["command_jobs"] = format_jobs(SSjobs.titles_by_department(COM,HCOM))
+	data["command_jobs"] = format_jobs(SSjobs.titles_by_department(COM))
 	data["support_jobs"] = format_jobs(SSjobs.titles_by_department(SPT))
 	data["engineering_jobs"] = format_jobs(SSjobs.titles_by_department(ENG))
 	data["medical_jobs"] = format_jobs(SSjobs.titles_by_department(MED))

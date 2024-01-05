@@ -158,10 +158,6 @@
 	accessories = list(/obj/item/clothing/accessory/solgov/department/exploration/fleet)
 	item_flags = ITEM_FLAG_WASHER_ALLOWED | ITEM_FLAG_INVALID_FOR_CHAMELEON
 
-/obj/item/clothing/under/solgov/utility/fleet/research
-	accessories = list(/obj/item/clothing/accessory/solgov/department/research/fleet)
-	item_flags = ITEM_FLAG_WASHER_ALLOWED | ITEM_FLAG_INVALID_FOR_CHAMELEON
-
 /obj/item/clothing/under/solgov/utility/fleet/polopants
 	name = "fleet polo"
 	desc = "An alternative utility uniform of the SCG Fleet, specially designed for engineering staff. The pants sports some yellow reflective stripes, and have knee pads."

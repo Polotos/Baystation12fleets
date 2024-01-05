@@ -1,5 +1,5 @@
 /datum/job/pathfinder
-	title = "Patrol Team Leader"
+	title = "Pathfinder"
 	department = "Exploration"
 	department_flag = EXP
 	total_positions = 1
@@ -11,11 +11,9 @@
 	minimum_character_age = list(SPECIES_HUMAN = 25)
 	ideal_character_age = 35
 	outfit_type = /singleton/hierarchy/outfit/job/torch/crew/exploration/pathfinder
-	allowed_branches = list(
-		/datum/mil_branch/fleet = /singleton/hierarchy/outfit/job/torch/crew/exploration/exploration/pathfinder/fleet
-		)
+	allowed_branches = list(/datum/mil_branch/expeditionary_corps)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o1
+		/datum/mil_rank/ec/o1
 	)
 	skill_points = 28
 	min_skill = list( // 9 points
@@ -58,9 +56,13 @@
 	ideal_character_age = 25
 	outfit_type = /singleton/hierarchy/outfit/job/torch/passenger/pilot
 	allowed_branches = list(
+		/datum/mil_branch/civilian,
+		/datum/mil_branch/expeditionary_corps = /singleton/hierarchy/outfit/job/torch/crew/exploration/pilot,
 		/datum/mil_branch/fleet = /singleton/hierarchy/outfit/job/torch/crew/exploration/pilot/fleet
 	)
 	allowed_ranks = list(
+		/datum/mil_rank/civ/contractor = /singleton/hierarchy/outfit/job/torch/passenger/research/nt_pilot,
+		/datum/mil_rank/ec/e7,
 		/datum/mil_rank/fleet/e6,
 		/datum/mil_rank/fleet/e7
 	)
@@ -82,7 +84,7 @@
 	)
 
 /datum/job/explorer
-	title = "Patrol Team Member"
+	title = "Explorer"
 	department = "Exploration"
 	department_flag = EXP
 	total_positions = 5
@@ -92,14 +94,11 @@
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
 	outfit_type = /singleton/hierarchy/outfit/job/torch/crew/exploration/explorer
-	allowed_branches = list(
-		/datum/mil_branch/fleet = /singleton/hierarchy/outfit/job/torch/crew/exploration/exploration/fleet
-		)
+	allowed_branches = list(/datum/mil_branch/expeditionary_corps)
 
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5
+		/datum/mil_rank/ec/e3,
+		/datum/mil_rank/ec/e5
 	)
 	min_skill = list( // 1 point
 		SKILL_EVA = SKILL_BASIC // 1 point

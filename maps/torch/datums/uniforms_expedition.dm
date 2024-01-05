@@ -1,7 +1,7 @@
 /singleton/hierarchy/mil_uniform/ec/com //Can only be officers
 	name = "EC command"
 	min_rank = 11
-	departments = COM|HCOM
+	departments = COM
 
 	utility_under = /obj/item/clothing/under/solgov/utility/expeditionary/officer/command
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/command,

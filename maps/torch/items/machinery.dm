@@ -35,14 +35,14 @@
 	autolinkers = list("service")
 
 /obj/machinery/telecomms/server/presets/exploration
-	id = "patrol team Server"
+	id = "Exploration Server"
 	freq_listening = list(EXP_FREQ)
-	channel_tags = list(list(EXP_FREQ, "patrol team", COMMS_COLOR_EXPLORER))
+	channel_tags = list(list(EXP_FREQ, "Exploration", COMMS_COLOR_EXPLORER))
 	autolinkers = list("exploration")
 
 // Suit cyclers and storage
 /obj/machinery/suit_storage_unit/explorer
-	name = "patrol team voidsuit storage unit"
+	name = "exploration voidsuit storage unit"
 	suit = /obj/item/clothing/suit/space/void/exploration
 	helmet = /obj/item/clothing/head/helmet/space/void/exploration
 	boots = /obj/item/clothing/shoes/magboots
@@ -89,7 +89,7 @@
 	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
 
 /obj/machinery/suit_cycler/exploration
-	name = "patrol team suit cycler"
+	name = "exploration suit cycler"
 	model_text = "Exploration"
 	req_access = list(access_explorer)
 	available_modifications = list(/singleton/item_modifier/space_suit/sol/explorer)

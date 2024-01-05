@@ -89,14 +89,14 @@
 	max_keys = 3
 
 /obj/item/device/radio/headset/headset_chief_steward
-	name = "Executor NJPs radio headset"
+	name = "chief steward's radio headset"
 	desc = "The headset of the menu maker."
 	icon_state = "srv_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/headset_chief_steward
 
 /obj/item/device/radio/headset/headset_chief_steward/alt
-	name = "Executor NJPs bowman headset"
+	name = "chief steward's bowman headset"
 	icon_state = "srv_headset_alt"
 	item_state = "headset"
 	max_keys = 3
@@ -127,26 +127,26 @@
 	max_keys = 4
 
 /obj/item/device/radio/headset/exploration
-	name = "patrol team headset"
+	name = "exploration headset"
 	desc = "A headset with access to the exploration channel. It has an inbuilt subspace antenna for better reception."
 	icon_state = "exp_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/exploration
 
 /obj/item/device/radio/headset/exploration/alt
-	name = "patrol team bowman headset"
+	name = "exploration bowman headset"
 	icon_state = "exp_headset_alt"
 	item_state = "exp_headset_alt"
 
 /obj/item/device/radio/headset/pathfinder
-	name = "patrol team leader headset"
-	desc = "A headset with access to the command and epatrol team channels. It has an inbuilt subspace antenna for better reception."
+	name = "pathfinder's headset"
+	desc = "A headset with access to the command and exploration channels. It has an inbuilt subspace antenna for better reception."
 	icon_state = "exp_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/pathfinder
 
 /obj/item/device/radio/headset/pathfinder/alt
-	name = "patrol team leader bowman headset"
+	name = "pathfinder's bowman headset"
 	icon_state = "exp_headset_alt"
 	item_state = "exp_headset_alt"
 

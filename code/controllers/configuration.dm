@@ -142,29 +142,9 @@
 	/// An observer that has returned to the main menu must wait this many minutes before rejoining
 	var/static/respawn_menu_delay = FALSE
 
-	var/static/Six_jobbans = TRUE
+	var/static/guest_jobban = TRUE
 
-	var/static/Six_whitelist = TRUE
-
-	var/static/Five_jobbans = TRUE
-
-	var/static/Five_whitelist = TRUE
-
-	var/static/Four_jobbans = TRUE
-
-	var/static/Four_whitelist = TRUE
-
-	var/static/Three_jobbans = TRUE
-
-	var/static/Three_whitelist = TRUE
-
-	var/static/Second_jobbans = TRUE
-
-	var/static/Second_whitelist = TRUE
-
-	var/static/Frist_jobbans = TRUE
-
-	var/static/Frist_whitelist = TRUE
+	var/static/usewhitelist = FALSE
 
 	/// force disconnect for inactive players after this many minutes, if non-0
 	var/static/kick_inactive = FALSE
@@ -626,30 +606,10 @@
 				discord_url = value
 			if ("ghosts_can_possess_animals")
 				ghosts_can_possess_animals = TRUE
-			if ("Six_jobbans")
-				Six_jobbans = TRUE
-			if ("Six_whitelist")
-				Six_whitelist = TRUE
-			if ("Five_jobbans")
-				Five_jobbans = TRUE
-			if ("Five_whitelist")
-				Five_whitelist = TRUE
-			if ("Four_jobbans")
-				Four_jobbans = TRUE
-			if ("Four_whitelist")
-				Four_whitelist = TRUE
-			if ("Three_jobbans")
-				Three_jobbans = TRUE
-			if ("Three_whitelist")
-				Three_whitelist = TRUE
-			if ("Second_jobbans")
-				Second_jobbans = TRUE
-			if ("Second_whitelist")
-				Second_whitelist = TRUE
-			if ("Frist_jobbans")
-				Frist_jobbans = TRUE
-			if ("Frist_whitelist")
-				Frist_whitelist = TRUE
+			if ("guest_jobban")
+				guest_jobban = TRUE
+			if ("guest_ban")
+				guests_allowed = FALSE
 			if ("disable_ooc")
 				ooc_allowed = FALSE
 			if ("disable_looc")
@@ -664,6 +624,8 @@
 				dsay_allowed = FALSE
 			if ("disable_respawn")
 				abandon_allowed = FALSE
+			if ("usewhitelist")
+				usewhitelist = TRUE
 			if ("traitor_scaling")
 				traitor_scaling = TRUE
 			if ("objectives_disabled")

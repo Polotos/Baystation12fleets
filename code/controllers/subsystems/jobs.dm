@@ -1,16 +1,15 @@
-var/global/const/HCOM = FLAG(0)
-var/global/const/ENG = FLAG(1)
-var/global/const/SEC = FLAG(2)
-var/global/const/MED = FLAG(3)
-var/global/const/SCI = FLAG(4)
-var/global/const/CIV = FLAG(5)
-var/global/const/COM = FLAG(6)
-var/global/const/MSC = FLAG(7)
-var/global/const/SRV = FLAG(8)
-var/global/const/SUP = FLAG(9)
-var/global/const/SPT = FLAG(10)
-var/global/const/EXP = FLAG(11)
-var/global/const/ROB = FLAG(12)
+var/global/const/ENG = FLAG(0)
+var/global/const/SEC = FLAG(1)
+var/global/const/MED = FLAG(2)
+var/global/const/SCI = FLAG(3)
+var/global/const/CIV = FLAG(4)
+var/global/const/COM = FLAG(5)
+var/global/const/MSC = FLAG(6)
+var/global/const/SRV = FLAG(7)
+var/global/const/SUP = FLAG(8)
+var/global/const/SPT = FLAG(9)
+var/global/const/EXP = FLAG(10)
+var/global/const/ROB = FLAG(11)
 
 GLOBAL_VAR(antag_code_phrase)
 GLOBAL_VAR(antag_code_response)
@@ -108,38 +107,9 @@ SUBSYSTEM_DEF(jobs)
 	// Set up AI spawn locations
 	spawn_empty_ai()
 
-/datum/controller/subsystem/jobs/proc/Six_jobbans(var/job)
-	for(var/dept in list(HCOM|COM))
-		if(job in titles_by_department(dept))
-			return TRUE
-		return FALSE
 
-/datum/controller/subsystem/jobs/proc/Five_jobbans(var/job)
-	for(var/dept in list(MED|SEC|SPT))
-		if(job in titles_by_department(dept))
-			return TRUE
-		return FALSE
-
-/datum/controller/subsystem/jobs/proc/Four_jobbans(var/job)
-	for(var/dept in list(ENG|SCI))
-		if(job in titles_by_department(dept))
-			return TRUE
-		return FALSE
-
-/datum/controller/subsystem/jobs/proc/Three_jobbans(var/job)
-	for(var/dept in list(EXP))
-		if(job in titles_by_department(dept))
-			return TRUE
-		return FALSE
-
-/datum/controller/subsystem/jobs/proc/Second_jobbans(var/job)
-	for(var/dept in list(SUP))
-		if(job in titles_by_department(dept))
-			return TRUE
-		return FALSE
-
-/datum/controller/subsystem/jobs/proc/Frist_jobbans(var/job)
-	for(var/dept in list(SRV))
+/datum/controller/subsystem/jobs/proc/guest_jobbans(job)
+	for(var/dept in list(COM, MSC, SEC))
 		if(job in titles_by_department(dept))
 			return TRUE
 	return FALSE
@@ -257,7 +227,7 @@ SUBSYSTEM_DEF(jobs)
 			continue
 		if(job.is_restricted(player.client.prefs))
 			continue
-		if(job.title in titles_by_department(HCOM | COM)) //If you want a command position, select it!
+		if(job.title in titles_by_department(COM)) //If you want a command position, select it!
 			continue
 		if(jobban_isbanned(player, job.title))
 			continue
@@ -273,7 +243,7 @@ SUBSYSTEM_DEF(jobs)
 ///This proc is called before the level loop of divide_occupations() and will try to select a head, ignoring ALL non-head preferences for every level until it locates a head or runs out of levels to check
 /datum/controller/subsystem/jobs/proc/fill_head_position(datum/game_mode/mode)
 	for (var/level = 1 to 3)
-		for (var/command_position as anything in titles_by_department(HCOM | COM))
+		for (var/command_position as anything in titles_by_department(COM))
 			var/datum/job/job = get_by_title(command_position)
 			if (!job)
 				continue
@@ -304,7 +274,7 @@ SUBSYSTEM_DEF(jobs)
 
 ///This proc is called at the start of the level loop of divide_occupations() and will cause head jobs to be checked before any other jobs of the same level
 /datum/controller/subsystem/jobs/proc/CheckHeadPositions(level, datum/game_mode/mode)
-	for(var/command_position in titles_by_department(HCOM | COM))
+	for(var/command_position in titles_by_department(COM))
 		var/datum/job/job = get_by_title(command_position)
 		if(!job)	continue
 		var/list/candidates = find_occupation_candidates(job, level)

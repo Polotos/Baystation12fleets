@@ -24,7 +24,7 @@
 	)
 
 /obj/structure/closet/secure_closet/pathfinder
-	name = "Patrol Team Leader's locker"
+	name = "pathfinder's locker"
 	req_access = list(access_pathfinder)
 	closet_appearance = /singleton/closet_appearance/secure_closet/torch/exploration/pathfinder
 
@@ -56,7 +56,7 @@
 	)
 
 /obj/structure/closet/secure_closet/explorer
-	name = "Patrol Team's locker"
+	name = "explorer's locker"
 	req_access = list(access_explorer)
 	closet_appearance = /singleton/closet_appearance/secure_closet/torch/exploration
 

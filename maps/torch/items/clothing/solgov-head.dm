@@ -440,7 +440,7 @@
 		)
 
 /obj/item/clothing/head/helmet/space/void/exploration
-	name = "patrol team voidsuit helmet"
+	name = "exploration voidsuit helmet"
 	desc = "A helmet of Exoplanet Exploration Unit, standard issue for Expeditionary Corps away missions. It has an armored glass dome for superiour visibility and extra anti-radiation lining."
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')

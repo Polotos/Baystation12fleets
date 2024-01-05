@@ -20,23 +20,11 @@ var/global/jobban_keylist[0]		//to store the keys & ranks
 //returns a reason if M is banned from rank, returns 0 otherwise
 /proc/jobban_isbanned(mob/M, rank)
 	if(M && rank)
-		if(config.Frist_whitelist && !check_Frist_whitelist(M))
-			return "Whitelisted Job"
-		return ckey_is_jobbanned(M.ckey, rank)
-		if(config.Second_whitelist && !check_Second_whitelist(M))
-			return "Whitelisted Job"
-		return ckey_is_jobbanned(M.ckey, rank)
-		if(config.Three_whitelist && !check_Three_whitelist(M))
-			return "Whitelisted Job"
-		return ckey_is_jobbanned(M.ckey, rank)
-		if(config.Four_whitelist && !check_Four_whitelist(M))
-			return "Whitelisted Job"
-		return ckey_is_jobbanned(M.ckey, rank)
-		if(config.Five_whitelist && !check_Five_whitelist(M))
-			return "Whitelisted Job"
-		return ckey_is_jobbanned(M.ckey, rank)
-		if(config.Six_whitelist && !check_Six_whitelist(M))
-			return "Whitelisted Job"
+		if (SSjobs.guest_jobbans(rank))
+			if(config.guest_jobban && IsGuestKey(M.key))
+				return "Guest Job-ban"
+			if(!GLOB.skip_allow_lists && config.usewhitelist && !check_whitelist(M))
+				return "Whitelisted Job"
 		return ckey_is_jobbanned(M.ckey, rank)
 	return 0
 
