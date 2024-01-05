@@ -20,47 +20,22 @@ var/global/jobban_keylist[0]		//to store the keys & ranks
 //returns a reason if M is banned from rank, returns 0 otherwise
 /proc/jobban_isbanned(mob/M, rank)
 	if(M && rank)
-		return ckey_is_jobbanned(M.ckey, rank)
-	return 0
-
-/proc/Frist_jobban_isbanned(mob/M, rank)
-	if(M && rank)
-		if(config.Frist_whitelist && check_Frist_whitelist(M))
+		if(config.Frist_whitelist && !check_Frist_whitelist(M))
 			return "Whitelisted Job"
 		return ckey_is_jobbanned(M.ckey, rank)
-	return 0
-
-/proc/Second_jobban_isbanned(mob/M, rank)
-	if(M && rank)
-		if(config.Second_whitelist && check_Second_whitelist(M))
+		if(config.Second_whitelist && !check_Second_whitelist(M))
 			return "Whitelisted Job"
 		return ckey_is_jobbanned(M.ckey, rank)
-	return 0
-/proc/Three_jobban_isbanned(mob/M, rank)
-	if(M && rank)
-		if(config.Three_whitelist && check_Three_whitelist(M))
+		if(config.Three_whitelist && !check_Three_whitelist(M))
 			return "Whitelisted Job"
 		return ckey_is_jobbanned(M.ckey, rank)
-	return 0
-
-/proc/Four_jobban_isbanned(mob/M, rank)
-	if(M && rank)
-		if(config.Four_whitelist && check_Four_whitelist(M))
+		if(config.Four_whitelist && !check_Four_whitelist(M))
 			return "Whitelisted Job"
 		return ckey_is_jobbanned(M.ckey, rank)
-	return 0
-
-/proc/Five_jobban_isbanned(mob/M, rank)
-	if(M && rank)
-		return ckey_is_jobbanned(M.ckey, rank)
-		if(config.Five_whitelist && check_Five_whitelist(M))
+		if(config.Five_whitelist && !check_Five_whitelist(M))
 			return "Whitelisted Job"
 		return ckey_is_jobbanned(M.ckey, rank)
-	return 0
-
-/proc/Six_jobban_isbanned(mob/M, rank)
-	if(M && rank)
-		if(config.Six_whitelist && check_Six_whitelist(M))
+		if(config.Six_whitelist && !check_Six_whitelist(M))
 			return "Whitelisted Job"
 		return ckey_is_jobbanned(M.ckey, rank)
 	return 0

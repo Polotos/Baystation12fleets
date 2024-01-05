@@ -141,7 +141,7 @@ var/global/datum/announcement/minor/minor_announcement = new(new_sound = 'sound/
 	if (security_state.current_security_level_is_same_or_higher_than(security_state.high_security_level))
 		return "Common"
 
-	if(job.department_flag & (COM | HCOM | CIV | MSC | NOWL))
+	if(job.department_flag & (COM | HCOM | CIV | MSC))
 		return "Common"
 	if(job.department_flag & SUP)
 		return "Supply"

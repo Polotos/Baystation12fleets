@@ -710,7 +710,7 @@
 					if(!temp) continue
 					job_list += temp.title
 			if("civiliandept")
-				for(var/jobPos in SSjobs.titles_by_department(CIV | NOWL))
+				for(var/jobPos in SSjobs.titles_by_department(CIV))
 					if(!jobPos)	continue
 					var/datum/job/temp = SSjobs.get_by_title(jobPos)
 					if(!temp) continue

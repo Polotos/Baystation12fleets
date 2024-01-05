@@ -11,7 +11,6 @@ var/global/const/SUP = FLAG(9)
 var/global/const/SPT = FLAG(10)
 var/global/const/EXP = FLAG(11)
 var/global/const/ROB = FLAG(12)
-var/global/const/NOWL = FLAG(13)
 
 GLOBAL_VAR(antag_code_phrase)
 GLOBAL_VAR(antag_code_response)

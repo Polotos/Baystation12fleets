@@ -1,6 +1,6 @@
 /datum/job/assistant
 	title = "Assistant"
-	department_flag = NOWL
+	department_flag = null
 	total_positions = -1
 	spawn_positions = -1
 	supervisors = "absolutely everyone"

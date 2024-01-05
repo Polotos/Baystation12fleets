@@ -326,7 +326,7 @@
 		"Command Support" = list(jobs = list(), dep = SPT, color = "#aac1ee"),
 		"Engineering" =     list(jobs = list(), dep = ENG, color = "#ffd699"),
 		"Security" =        list(jobs = list(), dep = SEC, color = "#ff9999"),
-		"Miscellaneous" =   list(jobs = list(), dep = CIV | NOWL, color = "#ffffff", colBreak = 1),
+		"Miscellaneous" =   list(jobs = list(), dep = CIV, color = "#ffffff", colBreak = 1),
 		"Synthetics" =      list(jobs = list(), dep = MSC, color = "#ccffcc"),
 		"Service" =         list(jobs = list(), dep = SRV, color = "#cccccc"),
 		"Medical" =         list(jobs = list(), dep = MED, color = "#99ffe6"),

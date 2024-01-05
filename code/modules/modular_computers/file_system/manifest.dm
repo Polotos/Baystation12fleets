@@ -10,7 +10,7 @@
 		list("names" = list(), "header" = "Supply", "flag" = SUP, "color" = MANIFEST_COLOR_SUPPLY),
 		list("names" = list(), "header" = "Exploration", "flag" = EXP, "color" = MANIFEST_COLOR_EXPLORER),
 		list("names" = list(), "header" = "Service", "flag" = SRV, "color" = MANIFEST_COLOR_SERVICE),
-		list("names" = list(), "header" = "Civilian", "flag" = CIV | NOWL, "color" = MANIFEST_COLOR_CIVILIAN),
+		list("names" = list(), "header" = "Civilian", "flag" = CIV, "color" = MANIFEST_COLOR_CIVILIAN),
 		list("names" = list(), "header" = "Miscellaneous", "flag" = MSC, "color" = MANIFEST_COLOR_MISC),
 		list("names" = list(), "header" = "Silicon", "color" = MANIFEST_COLOR_SILICON),
 	)
@@ -137,7 +137,7 @@
 		"exp" =   filtered_nano_crew_manifest(SSjobs.titles_by_department(EXP)),
 		"srv" =   filtered_nano_crew_manifest(SSjobs.titles_by_department(SRV)),
 		"bot" =   silicon_nano_crew_manifest(SSjobs.titles_by_department(MSC)),
-		"civ" =   filtered_nano_crew_manifest(SSjobs.titles_by_department(CIV | NOWL))
+		"civ" =   filtered_nano_crew_manifest(SSjobs.titles_by_department(CIV))
 		)
 
 /proc/flat_nano_crew_manifest()
