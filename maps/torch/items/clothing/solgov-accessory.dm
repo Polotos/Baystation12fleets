@@ -315,6 +315,11 @@ specialty pins
 	desc = "Orange blazes denoting a pharmacist."
 	color = "#ff6600"
 
+/obj/item/clothing/accessory/solgov/specialty/recruit
+	name = "Recruit qualification pin"
+	desc = "Iron pin indicating the beginning of training"
+	icon_state = "fleetpin_enlisted"
+
 /obj/item/clothing/accessory/solgov/specialty/enlisted
 	name = "enlisted qualification pin"
 	desc = "An iron pin denoting some special qualification."
@@ -573,6 +578,12 @@ department tags
 
 /obj/item/clothing/accessory/solgov/department/research/service
 	icon_state = "dept_exped_service"
+
+/obj/item/clothing/accessory/solgov/department/research/fleet
+	icon_state = "dept_fleet"
+	desc = "Insignia denoting assignment to the research department. These fit Fleet uniforms."
+	on_rolled_sleeves = "dept_fleet_sleeves"
+
 
 /*********
 ranks - ec

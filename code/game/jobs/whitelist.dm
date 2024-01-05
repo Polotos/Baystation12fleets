@@ -1,20 +1,112 @@
 #define WHITELISTFILE "data/whitelist.txt"
 
-var/global/list/whitelist = list()
+var/global/list/Six_whitelist = file2list("config/whitelist/Six_whitelist.txt")
 
-/hook/startup/proc/loadWhitelist()
-	if(config.usewhitelist)
-		load_whitelist()
+/hook/startup/proc/loadSixwhitelist()
+	if(config.Six_whitelist)
+		load_Six_whitelist()
 	return 1
 
-/proc/load_whitelist()
-	whitelist = file2list(WHITELISTFILE)
-	if(!length(whitelist))	whitelist = null
-
-/proc/check_whitelist(mob/M /*, rank*/)
-	if(!whitelist)
+/proc/load_Six_whitelist()
+	var/text = file2list("config/whitelist/Six_whitelist.txt")
+	if(!text)
+		log_misc("Failed to load config/Six_whitelist.txt")
+	else
+		Six_whitelist = splittext(text, "\n")
+/proc/check_Six_whitelist(mob/M)
+	if(!Six_whitelist)
 		return 0
-	return ("[M.ckey]" in whitelist)
+	return ("[M.ckey]" in Six_whitelist)
+
+var/global/list/Five_whitelist = file2list("config/whitelist/Five_whitelist.txt")
+
+/hook/startup/proc/loadFivewhitelist()
+	if(config.Five_whitelist)
+		load_Five_whitelist()
+	return 1
+
+/proc/load_Five_whitelist()
+	var/text = file2list("config/whitelist/Five_whitelist.txt")
+	if(!text)
+		log_misc("Failed to load config/Five_whitelist.txt")
+	else
+		Five_whitelist = splittext(text, "\n")
+/proc/check_Five_whitelist(mob/M)
+	if(!Five_whitelist)
+		return 0
+	return ("[M.ckey]" in Five_whitelist)
+
+var/global/list/Four_whitelist = file2list("config/whitelist/Four_whitelist.txt")
+
+/hook/startup/proc/loadFourwhitelist()
+	if(config.Four_whitelist)
+		load_Four_whitelist()
+	return 1
+
+/proc/load_Four_whitelist()
+	var/text = file2list("config/whitelist/Four_whitelist.txt")
+	if(!text)
+		log_misc("Failed to load config/Four_whitelist.txt")
+	else
+		Four_whitelist = splittext(text, "\n")
+/proc/check_Four_whitelist(mob/M)
+	if(!Four_whitelist)
+		return 0
+	return ("[M.ckey]" in Four_whitelist)
+
+var/global/list/Three_whitelist = file2list("config/whitelist/Three_whitelist.txt")
+
+/hook/startup/proc/loadThreewhitelist()
+	if(config.Three_whitelist)
+		load_Three_whitelist()
+	return 1
+
+/proc/load_Three_whitelist()
+	var/text = file2list("config/whitelist/Three_whitelist.txt")
+	if(!text)
+		log_misc("Failed to load config/Three_whitelist.txt")
+	else
+		Three_whitelist = splittext(text, "\n")
+/proc/check_Three_whitelist(mob/M)
+	if(!Three_whitelist)
+		return 0
+	return ("[M.ckey]" in Three_whitelist)
+
+var/global/list/Second_whitelist = file2list("config/whitelist/Second_whitelist.txt")
+
+/hook/startup/proc/loadSecondwhitelist()
+	if(config.Second_whitelist)
+		load_Second_whitelist()
+	return 1
+
+/proc/load_Second_whitelist()
+	var/text = file2list("config/whitelist/Second_whitelist.txt")
+	if(!text)
+		log_misc("Failed to load config/Second_whitelist.txt")
+	else
+		Three_whitelist = splittext(text, "\n")
+/proc/check_Second_whitelist(mob/M)
+	if(!Second_whitelist)
+		return 0
+	return ("[M.ckey]" in Second_whitelist)
+
+var/global/list/Frist_whitelist = file2list("config/whitelist/Frist_whitelist.txt")
+
+/hook/startup/proc/loadFristwhitelist()
+	if(config.Frist_whitelist)
+		load_Frist_whitelist()
+	return 1
+
+/proc/load_Frist_whitelist()
+	var/text = file2list("config/whitelist/Frist_whitelist.txt")
+	if(!text)
+		log_misc("Failed to load config/Frist_whitelist.txt")
+	else
+		Frist_whitelist = splittext(text, "\n")
+/proc/check_Frist_whitelist(mob/M)
+	if(!Frist_whitelist)
+		return 0
+	return ("[M.ckey]" in Frist_whitelist)
 
 var/global/list/alien_whitelist = list()
 

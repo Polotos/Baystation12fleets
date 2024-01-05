@@ -10,7 +10,11 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_types = list(/obj/item/card/id/torch/crew/pathfinder)
 	pda_type = /obj/item/modular_computer/pda/explorer
-	l_ear = /obj/item/device/radio/headset/pathfinder
+	l_ear = /obj/item/device/radio/headset/
+
+/singleton/hierarchy/outfit/job/torch/crew/exploration/exploration/pathfinder/fleet
+	name = OUTFIT_JOB_NAME("Pathfinder - Fleet")
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/exploration
 
 /singleton/hierarchy/outfit/job/torch/crew/exploration/explorer
 	name = OUTFIT_JOB_NAME("Explorer")
@@ -19,6 +23,10 @@
 	id_types = list(/obj/item/card/id/torch/crew/explorer)
 	pda_type = /obj/item/modular_computer/pda/explorer
 	l_ear = /obj/item/device/radio/headset/exploration
+
+/singleton/hierarchy/outfit/job/torch/crew/exploration/exploration/fleet
+	name = OUTFIT_JOB_NAME("Explorer - Fleet")
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/exploration
 
 /singleton/hierarchy/outfit/job/torch/passenger/pilot
 	name = OUTFIT_JOB_NAME("Shuttle Pilot")
@@ -38,4 +46,4 @@
 
 /singleton/hierarchy/outfit/job/torch/crew/exploration/pilot/fleet
 	name = OUTFIT_JOB_NAME("Shuttle Pilot - Fleet")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/exploration
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/research

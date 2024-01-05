@@ -6,7 +6,6 @@
 	spawn_positions = 2
 	supervisors = "the head of personnel"
 	access = list(access_hydroponics, access_kitchen)
-	alt_titles = list("Cook")
 	outfit_type = /singleton/hierarchy/outfit/job/service/chef
 
 /datum/job/hydro
@@ -17,7 +16,6 @@
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	access = list(access_hydroponics, access_kitchen)
-	alt_titles = list("Hydroponicist")
 	outfit_type = /singleton/hierarchy/outfit/job/service/gardener
 
 //Cargo
@@ -53,7 +51,6 @@
 	supervisors = "the quartermaster and the head of personnel"
 	economic_power = 5
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station)
-	alt_titles = list("Drill Technician","Prospector")
 	outfit_type = /singleton/hierarchy/outfit/job/cargo/mining
 
 /datum/job/janitor
@@ -64,7 +61,6 @@
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	access = list(access_janitor, access_maint_tunnels, access_engine, access_research, access_sec_doors, access_medical)
-	alt_titles = list("Custodian","Sanitation Technician")
 	outfit_type = /singleton/hierarchy/outfit/job/service/janitor
 
 //More or less assistants
@@ -76,7 +72,6 @@
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	access = list(access_library, access_maint_tunnels)
-	alt_titles = list("Journalist")
 	outfit_type = /singleton/hierarchy/outfit/job/librarian
 
 /datum/job/lawyer

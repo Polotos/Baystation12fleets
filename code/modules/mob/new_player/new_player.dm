@@ -321,6 +321,7 @@
 	dat += "<tr><td align = 'center' colspan = 3><b>[GLOB.using_map.station_name]:</b></td></tr>"
 
 	var/list/categorizedJobs = list(
+		"high Command" =    list(jobs = list(), dep = HCOM, color ="#0054fc"),
 		"Command" =         list(jobs = list(), dep = COM, color = "#aac1ee"),
 		"Command Support" = list(jobs = list(), dep = SPT, color = "#aac1ee"),
 		"Engineering" =     list(jobs = list(), dep = ENG, color = "#ffd699"),
@@ -400,7 +401,7 @@
 					dat += prof.get_join_link(client, "byond://?src=\ref[src];SelectedJob=[prof.title]", show_invalid_jobs, TRUE)
 				else
 					dat += prof.get_join_link(client, "byond://?src=\ref[src];SelectedJob=[prof.title]", show_invalid_jobs)
-			else if(prof.department_flag & COM)
+			else if(prof.department_flag & COM | HCOM)
 				dat += prof.get_join_link(client, "byond://?src=\ref[src];SelectedJob=[prof.title]", show_invalid_jobs, TRUE)
 			else
 				dat += prof.get_join_link(client, "byond://?src=\ref[src];SelectedJob=[prof.title]", show_invalid_jobs)

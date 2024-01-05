@@ -24,28 +24,18 @@ Civilian
 *******/
 
 /datum/job/assistant
-	title = "Passenger"
+	title = "Cerw in verification"
 	total_positions = 12
 	spawn_positions = 12
 	supervisors = "the Executive Officer"
 	economic_power = 6
 	announced = FALSE
-	alt_titles = list(
-		"Journalist" = /singleton/hierarchy/outfit/job/torch/passenger/passenger/journalist,
-		"Historian",
-		"Botanist",
-		"Investor" = /singleton/hierarchy/outfit/job/torch/passenger/passenger/investor,
-		"Naturalist",
-		"Ecologist",
-		"Entertainer",
-		"Independent Observer",
-		"Sociologist",
-		"Trainer")
-	outfit_type = /singleton/hierarchy/outfit/job/torch/passenger/passenger
-	allowed_branches = list(/datum/mil_branch/civilian)
+	outfit_type = /singleton/hierarchy/outfit/job/torch/crew/fleet
+	allowed_branches = list(
+		/datum/mil_branch/fleet
+	)
 	allowed_ranks = list(
-		/datum/mil_rank/civ/civ,
-		/datum/mil_rank/civ/contractor
+		/datum/mil_rank/fleet/e1
 	)
 	min_goals = 2
 	max_goals = 7
@@ -53,7 +43,6 @@ Civilian
 /datum/job/merchant
 	title = "Merchant"
 	department = "Civilian"
-	department_flag = CIV
 	total_positions = 2
 	spawn_positions = 2
 	availablity_chance = 30

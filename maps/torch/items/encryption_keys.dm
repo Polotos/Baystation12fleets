@@ -19,7 +19,7 @@
 	channels = list("Service" = 1)
 
 /obj/item/device/encryptionkey/headset_torchcl
-	name = "corporate liaison radio encryption key"
+	name = "Ambassador's Assistant radio encryption key"
 	icon_state = "nt_cypherkey"
 	channels = list("Service" = 1, "Command" = 1, "Hailing" = 1)
 
@@ -45,7 +45,7 @@
 	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Exploration" = 1, "AI Private" = 1, "Hailing" = 1)
 
 /obj/item/device/encryptionkey/exploration
-	name = "exploration radio encryption key"
+	name = "Patrol Team radio encryption key"
 	icon_state = "srv_cypherkey"
 	channels = list("Exploration" = 1, "Hailing" = 1)
 
@@ -55,7 +55,7 @@
 	channels = list("Exploration" = 1, "Supply" = 1, "Science" = 1, "Hailing" = 1)
 
 /obj/item/device/encryptionkey/headset_mining
-	name = "prospector radio encryption key"
+	name = "Landing group radio encryption key"
 	icon_state = "srv_cypherkey"
 	channels = list("Supply" = 1, "Exploration" = 1)
 

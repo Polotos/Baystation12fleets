@@ -83,18 +83,48 @@
 				/datum/mil_rank/ec/e5,
 				/datum/mil_rank/ec/e7,
 				/datum/mil_rank/ec/o1
+				),
+			/datum/mil_branch/fleet = list(
+				/datum/mil_rank/fleet/e1,
+				/datum/mil_rank/fleet/e2,
+				/datum/mil_rank/fleet/e3,
+				/datum/mil_rank/fleet/e4,
+				/datum/mil_rank/fleet/e5,
+				/datum/mil_rank/fleet/e6,
+				/datum/mil_rank/fleet/e7,
+				/datum/mil_rank/fleet/o1
 			)
 		),
 		/datum/species/unathi = list(
 			/datum/mil_branch/expeditionary_corps = list(
 				/datum/mil_rank/ec/e3,
 				/datum/mil_rank/ec/e5
+			),
+			/datum/mil_branch/fleet = list(
+				/datum/mil_rank/fleet/e1,
+				/datum/mil_rank/fleet/e2,
+				/datum/mil_rank/fleet/e3,
+				/datum/mil_rank/fleet/e4,
+				/datum/mil_rank/fleet/e5,
+				/datum/mil_rank/fleet/e6,
+				/datum/mil_rank/fleet/e7,
+				/datum/mil_rank/fleet/o1
 			)
 		),
 		/datum/species/unathi/yeosa = list(
 			/datum/mil_branch/expeditionary_corps = list(
 				/datum/mil_rank/ec/e3,
 				/datum/mil_rank/ec/e5
+			),
+			/datum/mil_branch/fleet = list(
+				/datum/mil_rank/fleet/e1,
+				/datum/mil_rank/fleet/e2,
+				/datum/mil_rank/fleet/e3,
+				/datum/mil_rank/fleet/e4,
+				/datum/mil_rank/fleet/e5,
+				/datum/mil_rank/fleet/e6,
+				/datum/mil_rank/fleet/e7,
+				/datum/mil_rank/fleet/o1
 			)
 		),
 		/datum/species/vox = list(
@@ -111,8 +141,8 @@
 
 /datum/mil_branch/expeditionary_corps
 	name = "Expeditionary Corps"
-	name_short = "SCGEC"
-	email_domain = "torch.ec.scg"
+	name_short = "UFEC"
+	email_domain = "torch.ec.uf"
 
 	rank_types = list(
 		/datum/mil_rank/ec/e3,
@@ -144,7 +174,7 @@
 
 /datum/mil_branch/fleet
 	name = "Fleet"
-	name_short = "SCGF"
+	name_short = "UFF"
 	email_domain = "torch.fleet.mil"
 
 	rank_types = list(
@@ -175,6 +205,8 @@
 	)
 
 	spawn_rank_types = list(
+		/datum/mil_rank/fleet/e1,
+		/datum/mil_rank/fleet/e2,
 		/datum/mil_rank/fleet/e2,
 		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
@@ -184,11 +216,20 @@
 		/datum/mil_rank/fleet/e8,
 		/datum/mil_rank/fleet/e9,
 		/datum/mil_rank/fleet/e9_alt1,
+		/datum/mil_rank/fleet/e9_alt2,
+		/datum/mil_rank/fleet/e9_alt3,
+		/datum/mil_rank/fleet/e9_alt4,
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
 		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o5
+		/datum/mil_rank/fleet/o5,
+		/datum/mil_rank/fleet/o6,
+		/datum/mil_rank/fleet/o7,
+		/datum/mil_rank/fleet/o8,
+		/datum/mil_rank/fleet/o9,
+		/datum/mil_rank/fleet/o10,
+		/datum/mil_rank/fleet/o10_alt
 	)
 
 	assistant_job = /datum/job/crew
@@ -218,9 +259,9 @@
 	)
 
 /datum/mil_branch/solgov
-	name = "SolGov Employee"
-	name_short = "SCG"
-	email_domain = "torch.scg"
+	name = "United Federation Employee"
+	name_short = "UF"
+	email_domain = "torch.UF"
 
 	rank_types = list(
 		/datum/mil_rank/sol/gov,
@@ -267,19 +308,19 @@
 /datum/mil_rank/fleet/e1
 	name = "Crewman Recruit"
 	name_short = "CR"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted)
 	sort_order = 1
 
 /datum/mil_rank/fleet/e2
 	name = "Crewman Apprentice"
 	name_short = "CA"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e2, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e2)
 	sort_order = 2
 
 /datum/mil_rank/fleet/e3
 	name = "Crewman"
 	name_short = "CN"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e3, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e3)
 	sort_order = 3
 
 /datum/mil_rank/fleet/e4
@@ -488,12 +529,12 @@
  */
 
 /datum/mil_rank/sol/gov
-	name = "SolGov Representative"
-	name_short = "SGR"
+	name = "United Federation Embassy"
+	name_short = "UFЕ"
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/representative)
 
 /datum/mil_rank/sol/agent
-	name = "SFP Agent"
+	name = "UFFP Agent"
 	name_short = "AGT"
 	accessory = list(/obj/item/clothing/accessory/badge/agent)
 

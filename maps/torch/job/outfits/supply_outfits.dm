@@ -50,3 +50,8 @@
 /singleton/hierarchy/outfit/job/torch/passenger/research/prospector/New()
 	..()
 	BACKPACK_OVERRIDE_ENGINEERING
+
+/singleton/hierarchy/outfit/job/torch/crew/supply/prospector/fleet
+	name = OUTFIT_JOB_NAME("Prospector - Fleet")
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/supply
+	shoes = /obj/item/clothing/shoes/dutyboots

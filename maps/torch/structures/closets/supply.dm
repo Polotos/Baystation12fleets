@@ -78,7 +78,7 @@
 	)
 
 /obj/structure/closet/secure_closet/prospector
-	name = "prospector's locker"
+	name = "Landing team's locker"
 	req_access = list(access_mining)
 	closet_appearance = /singleton/closet_appearance/secure_closet/torch/cargo
 
